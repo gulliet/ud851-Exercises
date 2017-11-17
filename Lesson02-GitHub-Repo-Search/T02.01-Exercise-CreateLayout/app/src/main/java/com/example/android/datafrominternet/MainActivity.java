@@ -17,10 +17,11 @@ package com.example.android.datafrominternet;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
-    // TODO (26) Create an EditText variable called mSearchBoxEditText
+    private EditText mSearchBoxEditText;
 
     // TODO (27) Create a TextView variable called mUrlDisplayTextView
     // TODO (28) Create a TextView variable called mSearchResultsTextView
