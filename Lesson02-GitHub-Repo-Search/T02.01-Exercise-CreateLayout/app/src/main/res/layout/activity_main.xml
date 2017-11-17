@@ -16,7 +16,7 @@
 -->
 
 
-<!--TODO (2) Make the orientation vertical-->
+
 <!--TODO (3) Give left, right, and top padding of 16dp-->
 <!--TODO (4) Remove the line that declares the id, we don't need it-->
 <!--TODO (5) Remove the xmlns:app declaration, we don't need that anymore-->
@@ -24,6 +24,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/activity_main"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
