@@ -33,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
 
         mSearchBoxEditText = (EditText) findViewById(R.id.et_search_box);
         mUrlDisplayTextView = (TextView) findViewById(R.id.tv_url_display);
-
-        // TODO (31) Use findViewById to get a reference to mSearchResultsTextView
+        mSearchResultsTextView = (TextView) findViewById(R.id.tv_github_search_results_json);
     }
 }
