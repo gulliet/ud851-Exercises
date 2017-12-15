@@ -42,7 +42,8 @@ public class MainActivity extends AppCompatActivity {
         // completed (5) Create a LinearLayoutManager variable called layoutManager
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
 
-        // TODO (6) Use setLayoutManager on mNumbersList with the LinearLayoutManager we created above
+        // completed (6) Use setLayoutManager on mNumbersList with the LinearLayoutManager we created above
+        mNumbersList.setLayoutManager(layoutManager);
 
         // TODO (7) Use setHasFixedSize(true) to designate that the contents of the RecyclerView won't change an item's size
 
