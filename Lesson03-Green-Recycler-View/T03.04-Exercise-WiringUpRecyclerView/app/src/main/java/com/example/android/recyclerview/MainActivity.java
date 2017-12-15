@@ -23,7 +23,9 @@ public class MainActivity extends AppCompatActivity {
     // completed (1) Create a private static final int called NUM_LIST_ITEMS and set it equal to 100
     private static final int NUM_LIST_ITEMS = 100;
 
-    // TODO (2) Create a GreenAdapter variable called mAdapter
+    // completed (2) Create a GreenAdapter variable called mAdapter
+    private GreenAdapter mAdapter;
+
     // TODO (3) Create a RecyclerView variable called mNumbersList
 
     @Override
