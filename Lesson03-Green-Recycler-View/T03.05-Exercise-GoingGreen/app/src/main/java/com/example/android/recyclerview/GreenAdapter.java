@@ -137,7 +137,8 @@ public class GreenAdapter extends RecyclerView.Adapter<GreenAdapter.NumberViewHo
 
             listItemNumberView = (TextView) itemView.findViewById(R.id.tv_item_number);
 
-            // TODO (11) Use itemView.findViewById to get a reference to tv_view_holder_instance
+            // completed (11) Use itemView.findViewById to get a reference to tv_view_holder_instance
+            viewHolderIndexDisplay = (TextView) itemView.findViewById(R.id.tv_view_holder_instance);
         }
 
         /**
