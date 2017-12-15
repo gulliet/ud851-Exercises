@@ -38,8 +38,11 @@ public class GreenAdapter {
     // completed (1) Add a private int variable called mNumberItems
     private int mNumberItems;
 
-    // TODO (2) Create a constructor for GreenAdapter that accepts an int as a parameter for numberOfItems
-    // TODO (3) Store the numberOfItems parameter in mNumberItems
+    // completed (2) Create a constructor for GreenAdapter that accepts an int as a parameter for numberOfItems
+    // completed (3) Store the numberOfItems parameter in mNumberItems
+    public GreenAdapter(int numberOfItems) {
+        mNumberItems = numberOfItems;
+    }
 
     // TODO (5) Override the onCreateViewHolder method
     // TODO (6) Create and return a new NumberViewHolder within this method
