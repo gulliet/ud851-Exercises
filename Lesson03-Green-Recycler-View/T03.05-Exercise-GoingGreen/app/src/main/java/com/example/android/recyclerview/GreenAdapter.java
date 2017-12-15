@@ -84,7 +84,8 @@ public class GreenAdapter extends RecyclerView.Adapter<GreenAdapter.NumberViewHo
         // completed (13) Use ColorUtils.getViewHolderBackgroundColorFromInstance and pass in a Context and the viewHolderCount
         int backgroundColor = ColorUtils.getViewHolderBackgroundColorFromInstance(context, viewHolderCount);
 
-        // TODO (14) Set the background color of viewHolder.itemView with the color from above
+        // completed (14) Set the background color of viewHolder.itemView with the color from above
+        viewHolder.itemView.setBackgroundColor(backgroundColor);
 
         // TODO (15) Increment viewHolderCount and log its value
 
