@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
     // completed (2) Create a menu resource in res/menu/ called main.xml
     // completed (3) Add one item to the menu with an ID of action_refresh
     // completed (4) Set the title of the menu item to "Refresh" using strings.xml
-    // TODO (5) Set the orderInCategory value to 1 to make sure this item is the first in the list
+    // completed (5) Set the orderInCategory value to 1 to make sure this item is the first in the list
     // TODO (6) Set app:showAsAction to ifRoom to display the menu item in the ActionBar if there is room
 
 
