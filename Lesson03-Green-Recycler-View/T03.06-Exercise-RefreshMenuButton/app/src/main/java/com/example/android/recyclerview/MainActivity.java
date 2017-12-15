@@ -20,6 +20,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
+import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -87,9 +88,20 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+    // completed (10) Override onOptionsItemSelected
+    // completed (11) Within this method, get the ID from the MenuItem
+    // completed (12) If the ID equals R.id.action_refresh, create and set a new adapter on the RecyclerView and return true
+    // completed (13) For now, for all other IDs, return super.onOptionsItemSelected
 
-    // TODO (10) Override onOptionsItemSelected
-    // TODO (11) Within this method, get the ID from the MenuItem
-    // TODO (12) If the ID equals R.id.action_refresh, create and set a new adapter on the RecyclerView and return true
-    // TODO (13) For now, for all other IDs, return super.onOptionsItemSelected
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int itemId = item.getItemId();
+        if (itemId == R.id.action_refresh) {
+            mAdapter = new GreenAdapter(NUM_LIST_ITEMS);
+            mNumbersList.setAdapter(mAdapter);
+            return true;
+        } else {
+            return super.onOptionsItemSelected(item);
+        }
+    }
 }
