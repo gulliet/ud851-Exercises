@@ -15,7 +15,9 @@
  */
 package com.example.android.recyclerview;
 
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -32,8 +34,8 @@ import android.widget.TextView;
  * If you don't like our puns, we named this Adapter GreenAdapter because its
  * contents are green.
  */
-// TODO (4) From GreenAdapter, extend RecyclerView.Adapter<NumberViewHolder>
-public class GreenAdapter {
+// completed (4) From GreenAdapter, extend RecyclerView.Adapter<NumberViewHolder>
+public class GreenAdapter extends RecyclerView.Adapter<GreenAdapter.NumberViewHolder> {
 
     // completed (1) Add a private int variable called mNumberItems
     private int mNumberItems;
@@ -44,8 +46,23 @@ public class GreenAdapter {
         mNumberItems = numberOfItems;
     }
 
-    // TODO (5) Override the onCreateViewHolder method
-    // TODO (6) Create and return a new NumberViewHolder within this method
+    // completed (5) Override the onCreateViewHolder method
+    // completed (6) Create and return a new NumberViewHolder within this method
+
+    @Override
+    public NumberViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+
+        Context context = parent.getContext();
+        int layoutIdForListItem = R.id.tv_item_number;
+        LayoutInflater layoutInflater = LayoutInflater.from(context);
+        boolean shouldAttachToParentImmediatly = false;
+
+        View view = layoutInflater.inflate(layoutIdForListItem, parent, shouldAttachToParentImmediatly);
+        NumberViewHolder viewHolder = new NumberViewHolder(view);
+
+        return viewHolder;
+    }
+
 
     // TODO (7) Override onBindViewHolder
     // TODO (8) Within onBindViewHolder, call holder.bind and pass in the position
