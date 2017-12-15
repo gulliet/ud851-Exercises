@@ -64,8 +64,8 @@ public class GreenAdapter extends RecyclerView.Adapter<GreenAdapter.NumberViewHo
     }
 
 
-    // TODO (7) Override onBindViewHolder
-    // TODO (8) Within onBindViewHolder, call holder.bind and pass in the position
+    // completed (7) Override onBindViewHolder
+    // completed (8) Within onBindViewHolder, call holder.bind and pass in the position
 
     @Override
     public void onBindViewHolder(NumberViewHolder holder, int position) {
@@ -73,7 +73,12 @@ public class GreenAdapter extends RecyclerView.Adapter<GreenAdapter.NumberViewHo
     }
 
 
-    // TODO (9) Override getItemCount and return the number of items to display
+    // completed (9) Override getItemCount and return the number of items to display
+
+    @Override
+    public int getItemCount() {
+        return mNumberItems;
+    }
 
     /**
      * Cache of the children views for a list item.
