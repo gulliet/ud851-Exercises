@@ -87,9 +87,11 @@ public class GreenAdapter extends RecyclerView.Adapter<GreenAdapter.NumberViewHo
 
     private int mNumberItems;
 
-    // TODO (1) Add an interface called ListItemClickListener
+    // completed (1) Add an interface called ListItemClickListener
     // TODO (2) Within that interface, define a void method called onListItemClick that takes an int as a parameter
+    public interface ListItemClickListener {
 
+    }
     // TODO (4) Add a ListItemClickListener as a parameter to the constructor and store it in mOnClickListener
     /**
      * Constructor for GreenAdapter that accepts a number of items to display and the specification
