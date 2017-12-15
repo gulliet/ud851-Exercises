@@ -52,7 +52,9 @@ public class GreenAdapter extends RecyclerView.Adapter<GreenAdapter.NumberViewHo
      */
     public GreenAdapter(int numberOfItems) {
         mNumberItems = numberOfItems;
-        // TODO (9) When a new GreenAdapter is created, set the viewHolderCount to 0
+
+        // completed (9) When a new GreenAdapter is created, set the viewHolderCount to 0
+        viewHolderCount = 0;
     }
     /**
      *
