@@ -80,6 +80,7 @@ public class GreenAdapter extends RecyclerView.Adapter<GreenAdapter.NumberViewHo
 
         // TODO (12) Set the text of viewHolderIndex to "ViewHolder index: " + viewHolderCount
 
+
         // TODO (13) Use ColorUtils.getViewHolderBackgroundColorFromInstance and pass in a Context and the viewHolderCount
         // TODO (14) Set the background color of viewHolder.itemView with the color from above
 
@@ -123,7 +124,7 @@ public class GreenAdapter extends RecyclerView.Adapter<GreenAdapter.NumberViewHo
         // Will display the position in the list, ie 0 through getItemCount() - 1
         TextView listItemNumberView;
         // completed (10) Add a TextView variable to display the ViewHolder index
-        TextView viewHolderIndexDisplay;
+        TextView viewHolderIndex;
 
         /**
          * Constructor for our ViewHolder. Within this constructor, we get a reference to our
@@ -138,7 +139,7 @@ public class GreenAdapter extends RecyclerView.Adapter<GreenAdapter.NumberViewHo
             listItemNumberView = (TextView) itemView.findViewById(R.id.tv_item_number);
 
             // completed (11) Use itemView.findViewById to get a reference to tv_view_holder_instance
-            viewHolderIndexDisplay = (TextView) itemView.findViewById(R.id.tv_view_holder_instance);
+            viewHolderIndex = (TextView) itemView.findViewById(R.id.tv_view_holder_instance);
         }
 
         /**
