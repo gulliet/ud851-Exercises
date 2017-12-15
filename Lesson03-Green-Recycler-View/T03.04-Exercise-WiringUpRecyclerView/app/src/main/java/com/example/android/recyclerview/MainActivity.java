@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         mNumbersList = (RecyclerView) findViewById(R.id.rv_numbers);
 
         // completed (5) Create a LinearLayoutManager variable called layoutManager
-        LinearLayoutManager layoutManager;
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
 
         // TODO (6) Use setLayoutManager on mNumbersList with the LinearLayoutManager we created above
 
