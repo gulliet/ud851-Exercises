@@ -122,7 +122,8 @@ public class GreenAdapter extends RecyclerView.Adapter<GreenAdapter.NumberViewHo
 
         // Will display the position in the list, ie 0 through getItemCount() - 1
         TextView listItemNumberView;
-        // TODO (10) Add a TextView variable to display the ViewHolder index
+        // completed (10) Add a TextView variable to display the ViewHolder index
+        TextView viewHolderIndexDisplay;
 
         /**
          * Constructor for our ViewHolder. Within this constructor, we get a reference to our
