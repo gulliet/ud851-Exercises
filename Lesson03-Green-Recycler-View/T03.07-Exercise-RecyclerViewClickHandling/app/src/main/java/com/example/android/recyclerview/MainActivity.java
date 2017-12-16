@@ -107,11 +107,14 @@ public class MainActivity extends AppCompatActivity
     }
 
     // completed (10) Override ListItemClickListener's onListItemClick method
-    // TODO (11) In the beginning of the method, cancel the Toast if it isn't null
+    // completed (11) In the beginning of the method, cancel the Toast if it isn't null
     // completed (12) Show a Toast when an item is clicked, displaying that item number that was clicked
 
     @Override
     public void onListItemClick(int clickedItemIndex) {
+        if (mToast != null) {
+            mToast.cancel();
+        }
         String toastMessage = "Item #" + clickedItemIndex + " clicked.";
         mToast = Toast.makeText(this, toastMessage, Toast.LENGTH_LONG);
         mToast.show();
