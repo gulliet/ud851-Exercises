@@ -98,7 +98,7 @@ public class MainActivity extends AppCompatActivity
              */
             case R.id.action_refresh:
                 // TODO (14) Pass in this as the ListItemClickListener to the GreenAdapter constructor
-                mAdapter = new GreenAdapter(NUM_LIST_ITEMS);
+                mAdapter = new GreenAdapter(NUM_LIST_ITEMS, this);
                 mNumbersList.setAdapter(mAdapter);
                 return true;
         }
@@ -108,10 +108,12 @@ public class MainActivity extends AppCompatActivity
 
     // completed (10) Override ListItemClickListener's onListItemClick method
     // TODO (11) In the beginning of the method, cancel the Toast if it isn't null
-    // TODO (12) Show a Toast when an item is clicked, displaying that item number that was clicked
+    // completed (12) Show a Toast when an item is clicked, displaying that item number that was clicked
 
     @Override
     public void onListItemClick(int clickedItemIndex) {
-
+        String toastMessage = "Item #" + clickedItemIndex + " clicked.";
+        mToast = Toast.makeText(this, toastMessage, Toast.LENGTH_LONG);
+        mToast.show();
     }
 }
