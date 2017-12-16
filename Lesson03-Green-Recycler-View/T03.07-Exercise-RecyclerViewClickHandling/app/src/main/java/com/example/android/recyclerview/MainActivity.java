@@ -70,11 +70,11 @@ public class MainActivity extends AppCompatActivity
          */
         mNumbersList.setHasFixedSize(true);
 
-        // TODO (13) Pass in this as the ListItemClickListener to the GreenAdapter constructor
+        // completed (13) Pass in this as the ListItemClickListener to the GreenAdapter constructor
         /*
          * The GreenAdapter is responsible for displaying each item in the list.
          */
-        mAdapter = new GreenAdapter(NUM_LIST_ITEMS);
+        mAdapter = new GreenAdapter(NUM_LIST_ITEMS, this);
         mNumbersList.setAdapter(mAdapter);
     }
 
