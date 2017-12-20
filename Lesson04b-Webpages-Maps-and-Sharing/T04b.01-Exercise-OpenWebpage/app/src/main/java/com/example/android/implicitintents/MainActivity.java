@@ -77,12 +77,14 @@ public class MainActivity extends AppCompatActivity {
                 .show();
     }
 
-    // TODO (1) Create a method called openWebPage that accepts a String as a parameter
+    // completed (1) Create a method called openWebPage that accepts a String as a parameter
     // Do steps 2 - 4 within openWebPage
+    public void openWebPage(String url) {
 
         // TODO (2) Use Uri.parse to parse the String into a Uri
 
         // TODO (3) Create an Intent with Intent.ACTION_VIEW and the webpage Uri as parameters
 
         // TODO (4) Verify that this Intent can be launched and then call startActivity
+    }
 }
