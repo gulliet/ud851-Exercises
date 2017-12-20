@@ -89,6 +89,9 @@ public class MainActivity extends AppCompatActivity {
         // completed (3) Create an Intent with Intent.ACTION_VIEW and the webpage Uri as parameters
         Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
 
-        // TODO (4) Verify that this Intent can be launched and then call startActivity
+        // completed (4) Verify that this Intent can be launched and then call startActivity
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        }
     }
 }
