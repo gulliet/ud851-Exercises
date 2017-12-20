@@ -118,7 +118,8 @@ public class MainActivity extends AppCompatActivity {
         // completed (2) Create an Intent with action type, Intent.ACTION_VIEW
         Intent intent = new Intent(Intent.ACTION_VIEW);
 
-        // TODO (3) Set the data of the Intent to the Uri passed into this method
+        // completed (3) Set the data of the Intent to the Uri passed into this method
+        intent.setData(geoLocation);
 
         // TODO (4) Verify that this Intent can be launched and then call startActivity
     }
