@@ -19,6 +19,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -53,8 +54,24 @@ public class MainActivity extends AppCompatActivity {
 
         // completed (6) Use Uri.Builder with the appropriate scheme and query to form the Uri for the address
         Uri.Builder builder = new Uri.Builder();
-        builder.scheme("geo").encodedPath("0,0").appendQueryParameter("q", addressString);
-        Uri addressUri = builder.build();
+//        builder.scheme("geo")
+//                .path("0,0")
+//                .appendQueryParameter("q", addressString)
+//                .appendQueryParameter("z","1");
+//        Uri addressUri = builder.build();
+//        Uri addressUri = Uri.parse("geo:0,0?q=" + Uri.encode("Eiffel Tower"));
+        builder.scheme("geo")
+                .opaquePart("0,0")
+                .appendQueryParameter("q", addressString)
+                .appendQueryParameter("z", "1");
+//        Uri addressUri = builder.build();
+        addressString = "Eiffel Tower, Champ de Mars, Avenue Anatole France, Paris";
+        String zoomFactor = "23";
+        Uri addressUri = Uri.parse("geo:0,0?").buildUpon()
+                .appendQueryParameter("q", addressString)
+                .appendQueryParameter("z", zoomFactor)
+                .build();
+        Log.v("Main Activity", "Uri address: " + addressUri.toString());
 
         // completed (7) Replace the Toast with a call to showMap, passing in the Uri from the previous step
         showMap(addressUri);
