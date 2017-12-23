@@ -18,6 +18,7 @@ package com.example.android.implicitintents;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.ShareCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
@@ -153,6 +154,11 @@ public class MainActivity extends AppCompatActivity {
         // completed (3) Create a title for the chooser window that will pop up
         String title = "Learning How to Share";
 
-        // TODO (4) Use ShareCompat.IntentBuilder to build the Intent and start the chooser
+        // completed (4) Use ShareCompat.IntentBuilder to build the Intent and start the chooser
+        ShareCompat.IntentBuilder
+                .from(this)
+                .setChooserTitle(title)
+                .setType(mimeType)
+                .setText(text);
     }
 }
