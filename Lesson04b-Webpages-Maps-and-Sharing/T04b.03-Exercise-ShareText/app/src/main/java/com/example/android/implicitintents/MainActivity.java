@@ -160,6 +160,7 @@ public class MainActivity extends AppCompatActivity {
                 .from(this)
                 .setChooserTitle(title)
                 .setType(mimeType)
-                .setText(text);
+                .setText(text)
+                .startChooser();
     }
 }
