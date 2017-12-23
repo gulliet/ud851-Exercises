@@ -150,7 +150,8 @@ public class MainActivity extends AppCompatActivity {
         // completed (2) Create a String variable called mimeType and set it to "text/plain"
         String mimeType = "text/plain";
 
-        // TODO (3) Create a title for the chooser window that will pop up
+        // completed (3) Create a title for the chooser window that will pop up
+        String title = "Learning How to Share";
 
         // TODO (4) Use ShareCompat.IntentBuilder to build the Intent and start the chooser
     }
