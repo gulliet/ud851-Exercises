@@ -87,7 +87,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    // TODO (6) Override onRestart, call super.onRestart, and call logAndAppend with ON_RESTART
+    // completed (6) Override onRestart, call super.onRestart, and call logAndAppend with ON_RESTART
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        logAndAppend(ON_RESTART);
+    }
+
 
     // TODO (7) Override onDestroy, call super.onDestroy, and call logAndAppend with ON_DESTROY
 
