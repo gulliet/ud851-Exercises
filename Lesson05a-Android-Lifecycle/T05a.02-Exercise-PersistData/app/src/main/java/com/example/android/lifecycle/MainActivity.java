@@ -141,13 +141,14 @@ public class MainActivity extends AppCompatActivity {
 
     // completed (2) Override onSaveInstanceState
     // Do steps 3 - 5 within onSaveInstanceState
-    // TODO (3) Call super.onSaveInstanceState
-    // TODO (4) Call logAndAppend with the ON_SAVE_INSTANCE_STATE String
+    // completed (3) Call super.onSaveInstanceState
+    // completed (4) Call logAndAppend with the ON_SAVE_INSTANCE_STATE String
     // TODO (5) Put the text from the TextView in the outState bundle
 
     @Override
     public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
         super.onSaveInstanceState(outState, outPersistentState);
+        logAndAppend(ON_SAVE_INSTANCE_STATE);
     }
 
     /**
