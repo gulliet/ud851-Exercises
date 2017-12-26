@@ -1,6 +1,7 @@
 package com.example.android.lifecycle;
 
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -138,11 +139,16 @@ public class MainActivity extends AppCompatActivity {
         logAndAppend(ON_DESTROY);
     }
 
-    // TODO (2) Override onSaveInstanceState
+    // completed (2) Override onSaveInstanceState
     // Do steps 3 - 5 within onSaveInstanceState
     // TODO (3) Call super.onSaveInstanceState
     // TODO (4) Call logAndAppend with the ON_SAVE_INSTANCE_STATE String
     // TODO (5) Put the text from the TextView in the outState bundle
+
+    @Override
+    public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
+        super.onSaveInstanceState(outState, outPersistentState);
+    }
 
     /**
      * Logs to the console and appends the lifecycle method name to the TextView so that you can
