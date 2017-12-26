@@ -47,7 +47,8 @@ public class MainActivity extends AppCompatActivity {
 
         mLifecycleDisplay = (TextView) findViewById(R.id.tv_lifecycle_events_display);
 
-        // TODO (1) Use logAndAppend within onCreate
+        // completed (1) Use logAndAppend within onCreate
+        logAndAppend(ON_CREATE);
     }
 
     // TODO (2) Override onStart, call super.onStart, and call logAndAppend with ON_START
