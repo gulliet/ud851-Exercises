@@ -136,7 +136,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
 
-        // TODO (2) Add the ON_STOP String to the front of mLifecycleCallbacks
+        // completed (2) Add the ON_STOP String to the front of mLifecycleCallbacks
+        mLifecycleCallbacks.add(ON_STOP);
 
         logAndAppend(ON_STOP);
     }
