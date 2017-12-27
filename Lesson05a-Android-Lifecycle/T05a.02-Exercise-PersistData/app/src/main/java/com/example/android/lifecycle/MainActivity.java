@@ -51,7 +51,14 @@ public class MainActivity extends AppCompatActivity {
 
         mLifecycleDisplay = (TextView) findViewById(R.id.tv_lifecycle_events_display);
 
-        // TODO (6) If savedInstanceState is not null and contains LIFECYCLE_CALLBACKS_TEXT_KEY, set that text on our TextView
+        // completed (6) If savedInstanceState is not null and contains LIFECYCLE_CALLBACKS_TEXT_KEY, set that text on our TextView
+        if (savedInstanceState != null) {
+            if (savedInstanceState.containsKey(LIFECYCLE_CALLBACKS_TEXT_KEY)) {
+                String allPreviousLifecycleCallbacks = savedInstanceState
+                        .getString(LIFECYCLE_CALLBACKS_TEXT_KEY);
+                mLifecycleDisplay.setText(allPreviousLifecycleCallbacks);
+            }
+        }
 
         logAndAppend(ON_CREATE);
     }
@@ -146,11 +153,11 @@ public class MainActivity extends AppCompatActivity {
     // completed (5) Put the text from the TextView in the outState bundle
 
     @Override
-    public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
-        super.onSaveInstanceState(outState, outPersistentState);
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
         logAndAppend(ON_SAVE_INSTANCE_STATE);
         String savedTextViewText = mLifecycleDisplay.getText().toString();
-        outState.putString(ON_SAVE_INSTANCE_STATE, savedTextViewText);
+        outState.putString(LIFECYCLE_CALLBACKS_TEXT_KEY, savedTextViewText);
     }
 
     /**
