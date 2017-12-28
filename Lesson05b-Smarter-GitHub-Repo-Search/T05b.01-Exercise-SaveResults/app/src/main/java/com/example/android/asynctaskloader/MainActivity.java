@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String SEARCH_QUERY_URL_EXTRA = "query";
 
     // TODO (2) Create a static final key to store the search's raw JSON
+    private static final String SEARCH_RESULTS_RAW_JSON = "results";
 
     private EditText mSearchBoxEditText;
 
