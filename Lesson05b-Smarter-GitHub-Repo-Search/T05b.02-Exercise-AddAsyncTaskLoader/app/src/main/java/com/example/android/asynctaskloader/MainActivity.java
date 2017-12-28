@@ -139,34 +139,32 @@ public class MainActivity extends AppCompatActivity
     // completed (3) Override onCreateLoader
 
     @Override
-    public Loader<String> onCreateLoader(int i, Bundle bundle) {
-        // Within onCreateLoader
-        // completed (4) Return a new AsyncTaskLoader<String> as an anonymous inner class with this as the constructor's parameter
+    public Loader<String> onCreateLoader(int i, final Bundle bundle) {
         return new AsyncTaskLoader<String>(this) {
             @Override
+            protected void onStartLoading() {
+                super.onStartLoading();
+                if (bundle == null) return;
+                mLoadingIndicator.setVisibility(View.VISIBLE);
+                forceLoad();
+            }
+
+            @Override
             public String loadInBackground() {
+                // TODO (9) Override loadInBackground
+
+                // Within loadInBackground
+                // TODO (10) Get the String for our URL from the bundle passed to onCreateLoader
+
+                // TODO (11) If the URL is null or empty, return null
+
+                // TODO (12) Copy the try / catch block from the AsyncTask's doInBackground method
+                // END - loadInBackground
+
                 return null;
             }
         };
-        // TODO (5) Override onStartLoading
-        // Within onStartLoading
 
-        // TODO (6) If args is null, return.
-
-        // TODO (7) Show the loading indicator
-
-        // TODO (8) Force a load
-        // END - onStartLoading
-
-        // TODO (9) Override loadInBackground
-
-        // Within loadInBackground
-        // TODO (10) Get the String for our URL from the bundle passed to onCreateLoader
-
-        // TODO (11) If the URL is null or empty, return null
-
-        // TODO (12) Copy the try / catch block from the AsyncTask's doInBackground method
-        // END - loadInBackground
     }
 
     // TODO (13) Override onLoadFinished
@@ -185,7 +183,7 @@ public class MainActivity extends AppCompatActivity
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            mLoadingIndicator.setVisibility(View.VISIBLE);
+
         }
 
         @Override
