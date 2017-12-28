@@ -137,8 +137,6 @@ public class MainActivity extends AppCompatActivity
         mErrorMessageDisplay.setVisibility(View.VISIBLE);
     }
 
-    // completed (3) Override onCreateLoader
-
     @Override
     public Loader<String> onCreateLoader(int i, final Bundle bundle) {
         return new AsyncTaskLoader<String>(this) {
@@ -164,21 +162,18 @@ public class MainActivity extends AppCompatActivity
                 }
             }
         };
-
     }
-
-    // TODO (13) Override onLoadFinished
 
     @Override
     public void onLoadFinished(Loader<String> loader, String s) {
-
+        mLoadingIndicator.setVisibility(View.INVISIBLE);
+        if (s != null && !s.equals("")) {
+            showJsonDataView();
+            mSearchResultsTextView.setText(s);
+        } else {
+            showErrorMessage();
+        }
     }
-
-    // Within onLoadFinished
-        // TODO (14) Hide the loading indicator
-
-        // TODO (15) Use the same logic used in onPostExecute to show the data or the error message
-        // END - onLoadFinished
 
     // TODO (16) Override onLoaderReset as it is part of the interface we implement, but don't do anything in this method
 
@@ -200,13 +195,6 @@ public class MainActivity extends AppCompatActivity
 
         @Override
         protected void onPostExecute(String githubSearchResults) {
-            mLoadingIndicator.setVisibility(View.INVISIBLE);
-            if (githubSearchResults != null && !githubSearchResults.equals("")) {
-                showJsonDataView();
-                mSearchResultsTextView.setText(githubSearchResults);
-            } else {
-                showErrorMessage();
-            }
         }
     }
 
