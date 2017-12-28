@@ -16,6 +16,8 @@
 package com.example.android.asynctaskloader;
 
 import android.app.LoaderManager;
+import android.content.AsyncTaskLoader;
+import android.content.Loader;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -134,28 +136,38 @@ public class MainActivity extends AppCompatActivity
         mErrorMessageDisplay.setVisibility(View.VISIBLE);
     }
 
-    // TODO (3) Override onCreateLoader
-    // Within onCreateLoader
-        // TODO (4) Return a new AsyncTaskLoader<String> as an anonymous inner class with this as the constructor's parameter
-            // TODO (5) Override onStartLoading
-                // Within onStartLoading
+    // completed (3) Override onCreateLoader
 
-                // TODO (6) If args is null, return.
+    @Override
+    public Loader<String> onCreateLoader(int i, Bundle bundle) {
+        // Within onCreateLoader
+        // completed (4) Return a new AsyncTaskLoader<String> as an anonymous inner class with this as the constructor's parameter
+        return new AsyncTaskLoader<String>(this) {
+            @Override
+            public String loadInBackground() {
+                return null;
+            }
+        };
+        // TODO (5) Override onStartLoading
+        // Within onStartLoading
 
-                // TODO (7) Show the loading indicator
+        // TODO (6) If args is null, return.
 
-                // TODO (8) Force a load
-                // END - onStartLoading
+        // TODO (7) Show the loading indicator
 
-            // TODO (9) Override loadInBackground
+        // TODO (8) Force a load
+        // END - onStartLoading
 
-                // Within loadInBackground
-                // TODO (10) Get the String for our URL from the bundle passed to onCreateLoader
+        // TODO (9) Override loadInBackground
 
-                // TODO (11) If the URL is null or empty, return null
+        // Within loadInBackground
+        // TODO (10) Get the String for our URL from the bundle passed to onCreateLoader
 
-                // TODO (12) Copy the try / catch block from the AsyncTask's doInBackground method
-                // END - loadInBackground
+        // TODO (11) If the URL is null or empty, return null
+
+        // TODO (12) Copy the try / catch block from the AsyncTask's doInBackground method
+        // END - loadInBackground
+    }
 
     // TODO (13) Override onLoadFinished
 
