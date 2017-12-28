@@ -170,7 +170,8 @@ public class MainActivity extends AppCompatActivity {
         // completed (7) Put the contents of the TextView that contains our raw JSON search results into a variable
         String rawJSON = mSearchResultsTextView.getText().toString();
 
-        // TODO (8) Using the key for the raw JSON search results, put the search results into the outState Bundle
+        // completed (8) Using the key for the raw JSON search results, put the search results into the outState Bundle
+        outState.putString(SEARCH_RESULTS_RAW_JSON, rawJSON);
 
     }
 
