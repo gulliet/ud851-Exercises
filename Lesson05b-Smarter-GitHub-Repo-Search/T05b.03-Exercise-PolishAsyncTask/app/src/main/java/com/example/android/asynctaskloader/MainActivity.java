@@ -216,11 +216,7 @@ public class MainActivity extends AppCompatActivity implements
 
             @Override
             public void deliverResult(String data) {
-                if (data == null || data.isEmpty()) {
-                    mGithubJson = null;
-                } else {
-                    mGithubJson = data;
-                }
+                mGithubJson = data;
                 super.deliverResult(data);
             }
 
