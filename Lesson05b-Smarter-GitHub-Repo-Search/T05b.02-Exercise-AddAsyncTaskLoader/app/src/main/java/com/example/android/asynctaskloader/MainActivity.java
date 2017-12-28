@@ -21,6 +21,7 @@ import android.content.Loader;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -151,17 +152,16 @@ public class MainActivity extends AppCompatActivity
 
             @Override
             public String loadInBackground() {
-                // TODO (9) Override loadInBackground
+                String queryUrl = bundle.getString(SEARCH_QUERY_URL_EXTRA);
+                if (queryUrl == null || TextUtils.isEmpty(queryUrl)) return null;
 
-                // Within loadInBackground
-                // TODO (10) Get the String for our URL from the bundle passed to onCreateLoader
-
-                // TODO (11) If the URL is null or empty, return null
-
-                // TODO (12) Copy the try / catch block from the AsyncTask's doInBackground method
-                // END - loadInBackground
-
-                return null;
+                try {
+                    URL githubUrl = new URL(queryUrl)
+                    return NetworkUtils.getResponseFromHttpUrl(githubUrl);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                    return null;
+                }
             }
         };
 
@@ -169,7 +169,12 @@ public class MainActivity extends AppCompatActivity
 
     // TODO (13) Override onLoadFinished
 
-        // Within onLoadFinished
+    @Override
+    public void onLoadFinished(Loader<String> loader, String s) {
+
+    }
+
+    // Within onLoadFinished
         // TODO (14) Hide the loading indicator
 
         // TODO (15) Use the same logic used in onPostExecute to show the data or the error message
@@ -190,11 +195,6 @@ public class MainActivity extends AppCompatActivity
         protected String doInBackground(URL... params) {
             URL searchUrl = params[0];
             String githubSearchResults = null;
-            try {
-                githubSearchResults = NetworkUtils.getResponseFromHttpUrl(searchUrl);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
             return githubSearchResults;
         }
 
