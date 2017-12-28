@@ -15,6 +15,7 @@
  */
 package com.example.android.asynctaskloader;
 
+import android.app.LoaderManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -30,8 +31,9 @@ import com.example.android.asynctaskloader.utilities.NetworkUtils;
 import java.io.IOException;
 import java.net.URL;
 
-// TODO (1) implement LoaderManager.LoaderCallbacks<String> on MainActivity
-public class MainActivity extends AppCompatActivity {
+// completed (1) implement LoaderManager.LoaderCallbacks<String> on MainActivity
+public class MainActivity extends AppCompatActivity
+        implements LoaderManager.LoaderCallbacks<String> {
 
     /* A constant to save and restore the URL that is being displayed */
     private static final String SEARCH_QUERY_URL_EXTRA = "query";
