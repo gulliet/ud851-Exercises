@@ -167,7 +167,9 @@ public class MainActivity extends AppCompatActivity {
         // completed (6) Using the key for the query URL, put the string in the outState Bundle
         outState.putString(SEARCH_QUERY_URL_EXTRA, queryUrl);
 
-        // TODO (7) Put the contents of the TextView that contains our raw JSON search results into a variable
+        // completed (7) Put the contents of the TextView that contains our raw JSON search results into a variable
+        String rawJSON = mSearchResultsTextView.getText().toString();
+
         // TODO (8) Using the key for the raw JSON search results, put the search results into the outState Bundle
 
     }
