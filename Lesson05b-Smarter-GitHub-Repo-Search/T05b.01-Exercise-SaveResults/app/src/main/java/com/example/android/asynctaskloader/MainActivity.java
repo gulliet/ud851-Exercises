@@ -158,7 +158,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
-        // TODO (4) Make sure super.onSaveInstanceState is called before doing anything else
+        // completed (4) Make sure super.onSaveInstanceState is called before doing anything else
         super.onSaveInstanceState(outState);
 
         // TODO (5) Put the contents of the TextView that contains our URL into a variable
