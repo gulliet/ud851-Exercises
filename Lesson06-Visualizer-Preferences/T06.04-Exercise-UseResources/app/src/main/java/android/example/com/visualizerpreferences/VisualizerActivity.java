@@ -52,7 +52,7 @@ public class VisualizerActivity extends AppCompatActivity {
         // Get all of the values from shared preferences to set it up
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         // completed (4) Use resources here instead of the hard coded string and boolean
-        mVisualizerView.setShowBass(sharedPreferences.getBoolean("show_bass",
+        mVisualizerView.setShowBass(sharedPreferences.getBoolean(getResources().getString(R.string.pref_show_bass_key),
                 getResources().getBoolean(R.bool.pref_show_bass_default)));
 
         mVisualizerView.setShowMid(true);
