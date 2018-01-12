@@ -53,8 +53,19 @@ public class SettingsFragment extends PreferenceFragmentCompat
         }
     }
 
-    // TODO (4) Override onSharedPreferenceChanged and, if it is not a checkbox preference,
+    // completed (4) Override onSharedPreferenceChanged and, if it is not a checkbox preference,
     // call setPreferenceSummary on the changed preference
+
+    @Override
+    public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String s) {
+        Preference p = findPreference(s);
+        if (null != p) {
+            if (!(p instanceof CheckBoxPreference)) {
+                String value = sharedPreferences.getString(p.getKey(), "");
+                setPreferenceSummary(p, value);
+            }
+        }
+    }
 
     // completed (2) Create a setPreferenceSummary which takes a Preference and String value as parameters.
     // This method should check if the preference is a ListPreference and, if so, find the label
