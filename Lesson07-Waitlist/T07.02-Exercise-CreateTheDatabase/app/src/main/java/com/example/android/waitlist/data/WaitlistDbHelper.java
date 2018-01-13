@@ -8,7 +8,8 @@ public class WaitlistDbHelper extends SQLiteOpenHelper {
     // completed (2) Create a static final String called DATABASE_NAME and set it to "waitlist.db"
     public static final String DATABASE_NAME = "waitlist.db";
 
-    // TODO (3) Create a static final int called DATABASE_VERSION and set it to 1
+    // completed (3) Create a static final int called DATABASE_VERSION and set it to 1
+    public static final int DATABASE_VERSION = 1;
 
     // TODO (4) Create a Constructor that takes a context and calls the parent constructor
 
