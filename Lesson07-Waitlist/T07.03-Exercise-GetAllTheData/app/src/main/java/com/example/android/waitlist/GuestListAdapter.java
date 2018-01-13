@@ -11,7 +11,8 @@ import android.widget.TextView;
 public class GuestListAdapter extends RecyclerView.Adapter<GuestListAdapter.GuestViewHolder> {
 
     private Context mContext;
-    // TODO (8) Add a new local variable mCount to store the count of items to be displayed in the recycler view
+    // completed (8) Add a new local variable mCount to store the count of items to be displayed in the recycler view
+    private int mCount;
 
     /**
      * Constructor using the context and the db cursor
