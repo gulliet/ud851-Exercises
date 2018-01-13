@@ -14,7 +14,7 @@ public class WaitlistDbHelper extends SQLiteOpenHelper {
     public static final int DATABASE_VERSION = 1;
 
     // completed (4) Create a Constructor that takes a context and calls the parent constructor
-    WaitlistDbHelper(Context context) {
+    public WaitlistDbHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
