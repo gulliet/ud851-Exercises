@@ -1,5 +1,6 @@
 package com.example.android.waitlist.data;
 
+import android.content.Context;
 import android.database.sqlite.SQLiteOpenHelper;
 
 // completed (1) extend the SQLiteOpenHelper class
@@ -11,7 +12,10 @@ public class WaitlistDbHelper extends SQLiteOpenHelper {
     // completed (3) Create a static final int called DATABASE_VERSION and set it to 1
     public static final int DATABASE_VERSION = 1;
 
-    // TODO (4) Create a Constructor that takes a context and calls the parent constructor
+    // completed (4) Create a Constructor that takes a context and calls the parent constructor
+    WaitlistDbHelper(Context context) {
+        super(context, DATABASE_NAME, null, DATABASE_VERSION);
+    }
 
     // TODO (5) Override the onCreate method
 
