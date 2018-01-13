@@ -32,7 +32,8 @@ public class WaitlistDbHelper extends SQLiteOpenHelper {
                 WaitlistContract.WaitlistEntry.COLUMN_TIMESTAMP + " TIMESTAMP DEFAULT CURRENT_TIMESTAMP" +
                 ")";
 
-        // TODO (7) Execute the query by calling execSQL on sqLiteDatabase and pass the string query SQL_CREATE_WAITLIST_TABLE
+        // completed (7) Execute the query by calling execSQL on sqLiteDatabase and pass the string query SQL_CREATE_WAITLIST_TABLE
+        sqLiteDatabase.execSQL(SQL_CREATE_WAITLIST_TABLE);
     }
 
     // TODO (8) Override the onUpgrade method
