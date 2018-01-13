@@ -2,9 +2,10 @@ package com.example.android.waitlist.data;
 
 import android.provider.BaseColumns;
 
-public class WaitlistContract {
-
-
+public final class WaitlistContract {
+    // To prevent someone from accidentally instantiating the contract class,
+    // make the constructor private.
+    private WaitlistContract() {}
 
     // TODO (1) Create an inner class named WaitlistEntry class that implements the BaseColumns interface
 
