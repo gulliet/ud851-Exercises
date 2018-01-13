@@ -70,6 +70,12 @@ public class VisualizerActivity extends AppCompatActivity implements SharedPrefe
                 getString(R.string.pref_color_red_value)));
     }
 
+    private void loadSizeFromSharedPreferences(SharedPreferences preferences) {
+        float minSize = Float.parseFloat(preferences.getString(getString(R.string.pref_size_key),
+                getString(R.string.pref_size_default)));
+        mVisualizerView.setMinSizeScale(minSize);
+    }
+
     // Updates the screen if the shared preferences change. This method is required when you make a
     // class implement OnSharedPreferenceChangedListener
     @Override
