@@ -40,10 +40,10 @@ public class GuestListAdapter extends RecyclerView.Adapter<GuestListAdapter.Gues
     }
 
 
-    // TODO (11) Modify the getItemCount to return the mCount value rather than 0
+    // completed (11) Modify the getItemCount to return the mCount value rather than 0
     @Override
     public int getItemCount() {
-        return 0;
+        return mCount;
     }
 
 
