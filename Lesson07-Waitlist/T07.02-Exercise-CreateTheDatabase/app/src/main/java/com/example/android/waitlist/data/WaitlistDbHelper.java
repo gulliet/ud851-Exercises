@@ -5,7 +5,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 // completed (1) extend the SQLiteOpenHelper class
 public class WaitlistDbHelper extends SQLiteOpenHelper {
 
-    // TODO (2) Create a static final String called DATABASE_NAME and set it to "waitlist.db"
+    // completed (2) Create a static final String called DATABASE_NAME and set it to "waitlist.db"
+    public static final String DATABASE_NAME = "waitlist.db";
 
     // TODO (3) Create a static final int called DATABASE_VERSION and set it to 1
 
