@@ -1,5 +1,6 @@
 package com.example.android.waitlist;
 
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -11,7 +12,8 @@ public class MainActivity extends AppCompatActivity {
 
     private GuestListAdapter mAdapter;
 
-    // TODO (1) Create a local field member of type SQLiteDatabase called mDb
+    // completed (1) Create a local field member of type SQLiteDatabase called mDb
+    private SQLiteDatabase mDb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
