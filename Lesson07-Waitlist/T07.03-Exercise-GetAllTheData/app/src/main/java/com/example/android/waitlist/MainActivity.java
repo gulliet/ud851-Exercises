@@ -36,7 +36,8 @@ public class MainActivity extends AppCompatActivity {
         // completed (2) Create a WaitlistDbHelper instance, pass "this" to the constructor as context
         WaitlistDbHelper dbHelper = new WaitlistDbHelper(this);
 
-        // TODO (3) Get a writable database reference using getWritableDatabase and store it in mDb
+        // completed (3) Get a writable database reference using getWritableDatabase and store it in mDb
+        mDb = dbHelper.getWritableDatabase();
 
         // TODO (4) call insertFakeData from TestUtil and pass the database reference mDb
 
