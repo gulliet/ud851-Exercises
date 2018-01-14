@@ -76,7 +76,8 @@ public class MainActivity extends AppCompatActivity {
                 // completed (9) call removeGuest and pass through that id
                 removeGuest(id);
 
-                // TODO (10) call swapCursor on mAdapter passing in getAllGuests() as the argument
+                // completed (10) call swapCursor on mAdapter passing in getAllGuests() as the argument
+                mAdapter.swapCursor(getAllGuests());
             }
         });
 
