@@ -66,7 +66,8 @@ public class GuestListAdapter extends RecyclerView.Adapter<GuestListAdapter.Gues
         // completed (17) Update the local mCursor to be equal to  newCursor
         mCursor = newCursor;
 
-        // TODO (18) Check if the newCursor is not null, and call this.notifyDataSetChanged() if so
+        // completed (18) Check if the newCursor is not null, and call this.notifyDataSetChanged() if so
+        if (mCursor != null) this.notifyDataSetChanged();
     }
 
     /**
