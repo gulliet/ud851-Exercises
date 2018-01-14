@@ -114,7 +114,8 @@ public class MainActivity extends AppCompatActivity {
         // completed (5) Inside, create a ContentValues instance to pass the values onto the insert query
         ContentValues cv = new ContentValues();
 
-        // TODO (6) call put to insert the name value with the key COLUMN_GUEST_NAME
+        // completed (6) call put to insert the name value with the key COLUMN_GUEST_NAME
+        cv.put(WaitlistContract.WaitlistEntry.COLUMN_GUEST_NAME, name);
 
         // TODO (7) call put to insert the party size value with the key COLUMN_PARTY_SIZE
 
