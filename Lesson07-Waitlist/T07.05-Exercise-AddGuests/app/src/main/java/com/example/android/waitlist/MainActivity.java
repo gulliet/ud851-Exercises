@@ -21,7 +21,9 @@ public class MainActivity extends AppCompatActivity {
     private GuestListAdapter mAdapter;
     private SQLiteDatabase mDb;
 
-    // TODO (1) Create local EditText members for mNewGuestNameEditText and mNewPartySizeEditText
+    // completed (1) Create local EditText members for mNewGuestNameEditText and mNewPartySizeEditText
+    private EditText mNewGuestNameEditText;
+    private EditText mNewPartySizeEditText;
 
     // TODO (13) Create a constant string LOG_TAG that is equal to the class.getSimpleName()
 
