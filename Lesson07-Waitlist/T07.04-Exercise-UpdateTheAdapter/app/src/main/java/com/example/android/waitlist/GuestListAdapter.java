@@ -51,8 +51,8 @@ public class GuestListAdapter extends RecyclerView.Adapter<GuestListAdapter.Gues
 
     @Override
     public int getItemCount() {
-        // TODO (4) Update the getItemCount to return the getCount of mCursor
-        return mCount;
+        // completed (4) Update the getItemCount to return the getCount of mCursor
+        return mCursor.getCount();
     }
 
 
