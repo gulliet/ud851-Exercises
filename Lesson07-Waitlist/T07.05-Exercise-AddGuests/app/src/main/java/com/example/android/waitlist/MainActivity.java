@@ -11,7 +11,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
-import com.example.android.waitlist.data.TestUtil;
 import com.example.android.waitlist.data.WaitlistContract;
 import com.example.android.waitlist.data.WaitlistDbHelper;
 
@@ -93,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         // completed (14) call addNewGuest with the guest name and party size
-        addGuest(mNewGuestNameEditText.getText().toString(), partySize);
+        addNewGuest(mNewGuestNameEditText.getText().toString(), partySize);
 
         // TODO (19) call mAdapter.swapCursor to update the cursor by passing in getAllGuests()
 
@@ -120,8 +119,8 @@ public class MainActivity extends AppCompatActivity {
         );
     }
 
-    // completed (4) Create a new addGuest method
-    private long addGuest(String name, int partySize) {
+    // completed (4) Create a new addNewGuest method
+    private long addNewGuest(String name, int partySize) {
 
         // completed (5) Inside, create a ContentValues instance to pass the values onto the insert query
         ContentValues cv = new ContentValues();
