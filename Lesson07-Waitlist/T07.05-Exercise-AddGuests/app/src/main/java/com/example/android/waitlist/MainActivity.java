@@ -120,7 +120,8 @@ public class MainActivity extends AppCompatActivity {
         // completed (7) call put to insert the party size value with the key COLUMN_PARTY_SIZE
         cv.put(WaitlistContract.WaitlistEntry.COLUMN_PARTY_SIZE, partySize);
 
-        // TODO (8) call insert to run an insert query on TABLE_NAME with the ContentValues created
+        // completed (8) call insert to run an insert query on TABLE_NAME with the ContentValues created
+        return mDb.insert(WaitlistContract.WaitlistEntry.TABLE_NAME, null, cv);
     }
 
 
