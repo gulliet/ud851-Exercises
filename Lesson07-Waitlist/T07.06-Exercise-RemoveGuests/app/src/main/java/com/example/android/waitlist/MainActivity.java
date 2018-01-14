@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
 
-            // TODO (5) Override onSwiped
+            // completed (5) Override onSwiped
             @Override
             public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction) {
                 // TODO (8) Inside, get the viewHolder's itemView's tag and store in a long variable id
