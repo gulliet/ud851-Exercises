@@ -38,7 +38,8 @@ public class GuestListAdapter extends RecyclerView.Adapter<GuestListAdapter.Gues
 
     @Override
     public void onBindViewHolder(GuestViewHolder holder, int position) {
-        // TODO (5) Move the cursor to the passed in position, return if moveToPosition returns false
+        // completed (5) Move the cursor to the passed in position, return if moveToPosition returns false
+        if (!mCursor.moveToPosition(position)) return;
 
         // TODO (6) Call getString on the cursor to get the guest's name
 
