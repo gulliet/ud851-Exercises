@@ -79,9 +79,9 @@ public class MainActivity extends AppCompatActivity {
                 // completed (10) call swapCursor on mAdapter passing in getAllGuests() as the argument
                 mAdapter.swapCursor(getAllGuests());
             }
-        });
+        }).attachToRecyclerView(waitlistRecyclerView);
 
-        //TODO (11) attach the ItemTouchHelper to the waitlistRecyclerView
+        //completed (11) attach the ItemTouchHelper to the waitlistRecyclerView
 
     }
 
