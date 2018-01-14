@@ -139,7 +139,9 @@ public class MainActivity extends AppCompatActivity {
     // completed (1) Create a new function called removeGuest that takes long id as input and returns a boolean
     private boolean removeGuest(long id) {
 
-        // TODO (2) Inside, call mDb.delete to pass in the TABLE_NAME and the condition that WaitlistEntry._ID equals id
+        // completed (2) Inside, call mDb.delete to pass in the TABLE_NAME and the condition that WaitlistEntry._ID equals id
+        return mDb.delete(WaitlistContract.WaitlistEntry.TABLE_NAME,
+                WaitlistContract.WaitlistEntry._ID + "=" + id, null) > 0;
     }
 
 
