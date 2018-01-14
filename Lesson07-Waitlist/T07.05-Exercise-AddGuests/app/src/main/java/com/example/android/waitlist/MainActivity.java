@@ -97,7 +97,10 @@ public class MainActivity extends AppCompatActivity {
         // completed (19) call mAdapter.swapCursor to update the cursor by passing in getAllGuests()
         mAdapter.swapCursor(getAllGuests());
 
-        // TODO (20) To make the UI look nice, call .getText().clear() on both EditTexts, also call clearFocus() on mNewPartySizeEditText
+        // completed (20) To make the UI look nice, call .getText().clear() on both EditTexts, also call clearFocus() on mNewPartySizeEditText
+        mNewPartySizeEditText.clearFocus();
+        mNewGuestNameEditText.getText().clear();
+        mNewPartySizeEditText.getText().clear();
 
     }
 
