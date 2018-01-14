@@ -73,7 +73,11 @@ public class MainActivity extends AppCompatActivity {
      */
     public void addToWaitlist(View view) {
 
-        // TODO (9) First thing, check if any of the EditTexts are empty, return if so
+        // completed (9) First thing, check if any of the EditTexts are empty, return if so
+        if (mNewGuestNameEditText.getText().length() == 0 ||
+                mNewPartySizeEditText.getText().length() == 0) {
+            return;
+        }
 
         // TODO (10) Create an integer to store the party size and initialize to 1
 
