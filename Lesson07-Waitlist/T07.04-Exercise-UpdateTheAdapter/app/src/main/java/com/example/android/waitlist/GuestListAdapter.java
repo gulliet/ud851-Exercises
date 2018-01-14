@@ -41,7 +41,8 @@ public class GuestListAdapter extends RecyclerView.Adapter<GuestListAdapter.Gues
         // completed (5) Move the cursor to the passed in position, return if moveToPosition returns false
         if (!mCursor.moveToPosition(position)) return;
 
-        // TODO (6) Call getString on the cursor to get the guest's name
+        // completed (6) Call getString on the cursor to get the guest's name
+        String guestName = mCursor.getString(mCursor.getColumnIndex(WaitlistContract.WaitlistEntry.COLUMN_GUEST_NAME));
 
         // TODO (7) Call getInt on the cursor to get the party size
 
