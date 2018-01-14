@@ -51,7 +51,8 @@ public class GuestListAdapter extends RecyclerView.Adapter<GuestListAdapter.Gues
         holder.nameTextView.setText(name);
         // Display the party count
         holder.partySizeTextView.setText(String.valueOf(partySize));
-        // TODO (7) Set the tag of the itemview in the holder to the id
+        // completed (7) Set the tag of the itemview in the holder to the id
+        holder.itemView.setTag(id);
     }
 
 
