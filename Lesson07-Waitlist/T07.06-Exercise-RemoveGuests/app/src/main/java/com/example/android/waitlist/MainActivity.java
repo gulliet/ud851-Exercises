@@ -73,7 +73,9 @@ public class MainActivity extends AppCompatActivity {
                 // completed (8) Inside, get the viewHolder's itemView's tag and store in a long variable id
                 long id = (long) viewHolder.itemView.getTag();
 
-                // TODO (9) call removeGuest and pass through that id
+                // completed (9) call removeGuest and pass through that id
+                removeGuest(id);
+
                 // TODO (10) call swapCursor on mAdapter passing in getAllGuests() as the argument
             }
         });
