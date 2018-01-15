@@ -59,8 +59,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Get the views
-        // TODO (1) You'll probably want more than just the Button
+        // completed (1) You'll probably want more than just the Button
         mButton = (Button) findViewById(R.id.button_next);
+        mWordTextView = (TextView) findViewById(R.id.text_view_word);
+        mDefinitionTextView = (TextView) findViewById(R.id.text_view_definition);
 
         //Run the database operation to get the cursor off of the main thread
         new WordFetchTask().execute();
