@@ -24,6 +24,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.udacity.example.droidtermsprovider.DroidTermsExampleContract;
 
@@ -40,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
     private int mCurrentState;
 
     private Button mButton;
+    private TextView mWordTextView;
+    private TextView mDefinitionTextView;
 
     // This state is when the word definition is hidden and clicking the button will therefore
     // show the definition
