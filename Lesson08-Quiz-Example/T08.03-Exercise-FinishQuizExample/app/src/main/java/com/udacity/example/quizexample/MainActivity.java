@@ -95,10 +95,14 @@ public class MainActivity extends AppCompatActivity {
         // Change button text
         mButton.setText(getString(R.string.show_definition));
 
-        // TODO (3) Go to the next word in the Cursor, show the next word and hide the definition
+        // completed (3) Go to the next word in the Cursor, show the next word and hide the definition
         // Note that you shouldn't try to do this if the cursor hasn't been set yet.
         // If you reach the end of the list of words, you should start at the beginning again.
         mCurrentState = STATE_HIDDEN;
+
+        if (!mData.moveToNext()) mData.moveToFirst();
+        mWordTextView.setText(mData.getString(wordCol));
+        mDefinitionTextView.setText("");
 
     }
 
