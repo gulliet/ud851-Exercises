@@ -108,7 +108,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        // TODO (5) Remember to close your cursor!
+        // completed (5) Remember to close your cursor!
+        mData.close();
     }
 
     // Use an async task to do the data fetch off of the main thread.
@@ -148,7 +149,6 @@ public class MainActivity extends AppCompatActivity {
                 String def = mData.getString(defCol);
                 Log.v("Cursor Example", word + " - " + def);
             }
-            mData.close();
 
             // TODO (2) Initialize anything that you need the cursor for, such as setting up
             // the screen with the first word and setting any other instance variables
