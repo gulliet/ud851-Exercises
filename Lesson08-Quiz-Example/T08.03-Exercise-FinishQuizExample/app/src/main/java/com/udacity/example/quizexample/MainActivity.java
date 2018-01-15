@@ -155,8 +155,12 @@ public class MainActivity extends AppCompatActivity {
                 Log.v("Cursor Example", word + " - " + def);
             }
 
-            // TODO (2) Initialize anything that you need the cursor for, such as setting up
+            // completed (2) Initialize anything that you need the cursor for, such as setting up
             // the screen with the first word and setting any other instance variables
+            mData.moveToFirst();
+            String word = mData.getString(wordCol);
+            String def = mData.getString(defCol);
+            mWordTextView.setText(word);
         }
     }
 
