@@ -36,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
 
     // The data from the DroidTermsExample content provider
     private Cursor mData;
+    private int wordCol;
+    private int defCol;
 
     // The current state of the app
     private int mCurrentState;
@@ -143,23 +145,12 @@ public class MainActivity extends AppCompatActivity {
             // Set the data for MainActivity
             mData = cursor;
 
-            /*
-                Add code that implements the code shown in cursor demo video.
-             */
-            int wordCol = mData.getColumnIndex(DroidTermsExampleContract.COLUMN_WORD);
-            int defCol = mData.getColumnIndex(DroidTermsExampleContract.COLUMN_DEFINITION);
-
-            while (mData.moveToNext()) {
-                String word = mData.getString(wordCol);
-                String def = mData.getString(defCol);
-                Log.v("Cursor Example", word + " - " + def);
-            }
-
             // completed (2) Initialize anything that you need the cursor for, such as setting up
             // the screen with the first word and setting any other instance variables
+            wordCol = mData.getColumnIndex(DroidTermsExampleContract.COLUMN_WORD);
+            defCol = mData.getColumnIndex(DroidTermsExampleContract.COLUMN_DEFINITION);
             mData.moveToFirst();
             String word = mData.getString(wordCol);
-            String def = mData.getString(defCol);
             mWordTextView.setText(word);
         }
     }
