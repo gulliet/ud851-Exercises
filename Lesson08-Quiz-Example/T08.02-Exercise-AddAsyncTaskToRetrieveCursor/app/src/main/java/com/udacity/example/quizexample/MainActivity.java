@@ -111,11 +111,12 @@ public class MainActivity extends AppCompatActivity {
             return cursor;
         }
 
-        // TODO (4) In the onPostExecute method, store the Cursor object in mData
+        // completed (4) In the onPostExecute method, store the Cursor object in mData
 
         @Override
         protected void onPostExecute(Cursor cursor) {
             super.onPostExecute(cursor);
+            mData = cursor;
         }
     }
 }
