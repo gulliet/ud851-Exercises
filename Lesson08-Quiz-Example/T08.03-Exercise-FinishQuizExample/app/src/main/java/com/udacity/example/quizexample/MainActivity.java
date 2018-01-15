@@ -111,8 +111,10 @@ public class MainActivity extends AppCompatActivity {
         // Change button text
         mButton.setText(getString(R.string.next_word));
 
-        // TODO (4) Show the definition
+        // completed (4) Show the definition
         mCurrentState = STATE_SHOWN;
+
+        mDefinitionTextView.setText(mData.getString(defCol));
 
     }
 
