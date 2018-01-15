@@ -21,6 +21,7 @@ import android.database.Cursor;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -135,6 +136,19 @@ public class MainActivity extends AppCompatActivity {
 
             // Set the data for MainActivity
             mData = cursor;
+
+            /*
+                Add code that implements the code shown in cursor demo video.
+             */
+            int wordCol = mData.getColumnIndex(DroidTermsExampleContract.COLUMN_WORD);
+            int defCol = mData.getColumnIndex(DroidTermsExampleContract.COLUMN_DEFINITION);
+
+            while (mData.moveToNext()) {
+                String word = mData.getString(wordCol);
+                String def = mData.getString(defCol);
+                Log.v("Cursor Example", word + " - " + def);
+            }
+            mData.close();
 
             // TODO (2) Initialize anything that you need the cursor for, such as setting up
             // the screen with the first word and setting any other instance variables
