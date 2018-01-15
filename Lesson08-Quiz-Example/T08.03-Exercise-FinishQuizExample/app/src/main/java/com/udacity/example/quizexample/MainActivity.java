@@ -158,6 +158,7 @@ public class MainActivity extends AppCompatActivity {
             mData.moveToFirst();
             String word = mData.getString(wordCol);
             mWordTextView.setText(word);
+            mDefinitionTextView.setText("");
         }
     }
 
