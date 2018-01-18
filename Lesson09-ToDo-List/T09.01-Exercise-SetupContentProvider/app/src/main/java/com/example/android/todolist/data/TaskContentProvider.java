@@ -22,7 +22,7 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.support.annotation.NonNull;
 
-// TODO (1) Verify that TaskContentProvider extends from ContentProvider and implements required methods
+// commpleted (1) Verify that TaskContentProvider extends from ContentProvider and implements required methods
 public class TaskContentProvider extends ContentProvider {
 
 
