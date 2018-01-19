@@ -17,6 +17,7 @@
 package com.example.android.todolist.data;
 
 import android.content.IntentFilter;
+import android.net.Uri;
 import android.provider.BaseColumns;
 
 
@@ -32,6 +33,8 @@ public class TaskContract {
       */
 
     public static final String AUTHORITY = "com.example.android.todolist";
+    public static final Uri BASE_CONTENT_URI = Uri.parse("content://" + AUTHORITY);
+
 
 
     /* TaskEntry is an inner class that defines the contents of the task table */
