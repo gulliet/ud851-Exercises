@@ -17,10 +17,12 @@
 package com.example.android.todolist.data;
 
 import android.content.ContentProvider;
+import android.content.ContentUris;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.UriMatcher;
 import android.database.Cursor;
+import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.support.annotation.NonNull;
@@ -85,13 +87,20 @@ public class TaskContentProvider extends ContentProvider {
         // completed (2) Write URI matching code to identify the match for the tasks directory
         int match = sUriMatcher.match(uri);
 
-        // TODO (3) Insert new values into the database
+        // completed (3) Insert new values into the database
         // completed (4) Set the value for the returnedUri and write the default case for unknown URI's
 
         Uri returnUri;
 
         switch (match) {
             case TASKS:
+                long id = db.insert(TaskContract.TaskEntry.TABLE_NAME, null, values);
+                if (id > 0) {
+                    // Success!
+                    returnUri = ContentUris.withAppendedId(TaskContract.TaskEntry.CONTENT_URI, id);
+                } else {
+                    throw new SQLException("Failed to insert row into " + uri);
+                }
                 break;
             default:
                 throw new UnsupportedOperationException("Unknown uri: " + uri);
