@@ -135,7 +135,7 @@ public class TaskContentProvider extends ContentProvider {
                         selection,
                         selectionArgs,
                         null,
-                        null
+                        null,
                         sortOrder);
                 break;
             default:
