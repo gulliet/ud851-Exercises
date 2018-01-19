@@ -19,6 +19,7 @@ package com.example.android.todolist.data;
 import android.content.ContentProvider;
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.UriMatcher;
 import android.database.Cursor;
 import android.net.Uri;
 import android.support.annotation.NonNull;
@@ -34,7 +35,16 @@ public class TaskContentProvider extends ContentProvider {
 
     // TODO (3) Declare a static variable for the Uri matcher that you construct
 
-    // TODO (2) Define a static buildUriMatcher method that associates URI's with their int match
+    // completed (2) Define a static buildUriMatcher method that associates URI's with their int match
+    public static UriMatcher buildUriMatcher() {
+        // First, we build an empty UriMatcher
+        UriMatcher uriMatcher = new UriMatcher(UriMatcher.NO_MATCH);
+
+        uriMatcher.addURI(TaskContract.AUTHORITY, TaskContract.PATH_TASKS, TASKS);
+        uriMatcher.addURI(TaskContract.AUTHORITY, TaskContract.PATH_TASKS + "/#", TASK_WITH_ID);
+
+        return uriMatcher;
+    }
 
     // Member variable for a TaskDbHelper that's initialized in the onCreate() method
     private TaskDbHelper mTaskDbHelper;
