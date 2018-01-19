@@ -86,7 +86,16 @@ public class TaskContentProvider extends ContentProvider {
         int match = sUriMatcher.match(uri);
 
         // TODO (3) Insert new values into the database
-        // TODO (4) Set the value for the returnedUri and write the default case for unknown URI's
+        // completed (4) Set the value for the returnedUri and write the default case for unknown URI's
+
+        Uri returnUri;
+
+        switch (match) {
+            case TASKS:
+                break;
+            default:
+                throw new UnsupportedOperationException("Unknown uri: " + uri);
+        }
 
         // TODO (5) Notify the resolver if the uri has been changed, and return the newly inserted URI
 
