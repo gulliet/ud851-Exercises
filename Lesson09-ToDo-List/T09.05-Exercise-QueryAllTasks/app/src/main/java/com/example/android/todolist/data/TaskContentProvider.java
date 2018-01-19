@@ -142,9 +142,10 @@ public class TaskContentProvider extends ContentProvider {
                 throw new UnsupportedOperationException("Unknown URI: " + uri);
         }
 
-        // TODO (4) Set a notification URI on the Cursor and return that Cursor
+        // completed (4) Set a notification URI on the Cursor and return that Cursor
+        cursor.setNotificationUri(getContext().getContentResolver(), uri);
 
-        throw new UnsupportedOperationException("Not yet implemented");
+        return cursor;
     }
 
 
