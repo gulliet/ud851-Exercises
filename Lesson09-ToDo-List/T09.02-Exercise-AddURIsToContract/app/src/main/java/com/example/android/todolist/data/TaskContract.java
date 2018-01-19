@@ -34,7 +34,7 @@ public class TaskContract {
 
     public static final String AUTHORITY = "com.example.android.todolist";
     public static final Uri BASE_CONTENT_URI = Uri.parse("content://" + AUTHORITY);
-
+    public static final String PATH_TASKS = "tasks";
 
 
     /* TaskEntry is an inner class that defines the contents of the task table */
