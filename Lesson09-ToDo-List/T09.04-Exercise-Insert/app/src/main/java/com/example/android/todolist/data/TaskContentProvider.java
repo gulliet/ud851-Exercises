@@ -79,10 +79,11 @@ public class TaskContentProvider extends ContentProvider {
 
     @Override
     public Uri insert(@NonNull Uri uri, ContentValues values) {
-        // TODO (1) Get access to the task database (to write new data to)
+        // completed (1) Get access to the task database (to write new data to)
         final SQLiteDatabase db = mTaskDbHelper.getWritableDatabase();
 
-        // TODO (2) Write URI matching code to identify the match for the tasks directory
+        // completed (2) Write URI matching code to identify the match for the tasks directory
+        int match = sUriMatcher.match(uri);
 
         // TODO (3) Insert new values into the database
         // TODO (4) Set the value for the returnedUri and write the default case for unknown URI's
