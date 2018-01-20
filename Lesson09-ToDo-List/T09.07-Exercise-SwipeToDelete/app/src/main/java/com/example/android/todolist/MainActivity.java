@@ -90,7 +90,8 @@ public class MainActivity extends AppCompatActivity implements
                 // completed (2) Delete a single row of data using a ContentResolver
                 getContentResolver().delete(uri, null, null);
 
-                // TODO (3) Restart the loader to re-query for all tasks after a deletion
+                // completed (3) Restart the loader to re-query for all tasks after a deletion
+                getSupportLoaderManager().restartLoader(TASK_LOADER_ID, null, MainActivity.this);
                 
             }
         }).attachToRecyclerView(mRecyclerView);
