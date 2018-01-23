@@ -86,7 +86,7 @@ public class NotificationUtils {
 
         // completed (12) Trigger the notification by calling notify on the NotificationManager.
         // Pass in a unique ID of your choosing for the notification and notificationBuilder.build()
-    }
+        notificationManager.notify(WATER_REMINDER_NOTIFICATION_ID, notificationBuilder.build());    }
 
 
     // completed (1) Create a helper method called contentIntent with a single parameter for a Context. It
