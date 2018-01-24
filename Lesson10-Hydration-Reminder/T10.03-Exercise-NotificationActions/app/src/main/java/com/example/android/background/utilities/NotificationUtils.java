@@ -72,8 +72,8 @@ public class NotificationUtils {
                     context.getString(R.string.main_notification_channel_name),
                     NotificationManager.IMPORTANCE_HIGH);
             notificationManager.createNotificationChannel(mChannel);
-            }
-        NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(context,WATER_REMINDER_NOTIFICATION_CHANNEL_ID)
+        }
+        NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(context, WATER_REMINDER_NOTIFICATION_CHANNEL_ID)
                 .setColor(ContextCompat.getColor(context, R.color.colorPrimary))
                 .setSmallIcon(R.drawable.ic_drink_notification)
                 .setLargeIcon(largeIcon(context))
@@ -108,7 +108,12 @@ public class NotificationUtils {
                 ignoreReminderIntent,
                 PendingIntent.FLAG_UPDATE_CURRENT);
 
-        //      TODO (9) Create an Action for the user to ignore the notification (and dismiss it)
+        //      completed (9) Create an Action for the user to ignore the notification (and dismiss it)
+        NotificationCompat.Action ignoreReminderAction =
+                new NotificationCompat.Action(R.drawable.ic_cancel_black_24px,
+                        "No, thanks.",
+                        ignoreReminderPendingIntent);
+
         //      TODO (10) Return the action
     }
 
