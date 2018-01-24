@@ -119,12 +119,14 @@ public class NotificationUtils {
     }
 
 
-    //  TODO (11) Add a static method called drinkWaterAction
-    //      TODO (12) Create an Intent to launch WaterReminderIntentService
-    //      TODO (13) Set the action of the intent to designate you want to increment the water count
-    //      TODO (14) Create a PendingIntent from the intent to launch WaterReminderIntentService
-    //      TODO (15) Create an Action for the user to tell us they've had a glass of water
-    //      TODO (16) Return the action
+    //  completed (11) Add a static method called drinkWaterAction
+    private static NotificationCompat.Action drinkWaterAction(Context context) {
+        //      TODO (12) Create an Intent to launch WaterReminderIntentService
+        //      TODO (13) Set the action of the intent to designate you want to increment the water count
+        //      TODO (14) Create a PendingIntent from the intent to launch WaterReminderIntentService
+        //      TODO (15) Create an Action for the user to tell us they've had a glass of water
+        //      TODO (16) Return the action
+    }
 
 
     private static PendingIntent contentIntent(Context context) {
