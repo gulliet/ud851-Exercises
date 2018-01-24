@@ -30,6 +30,7 @@ import android.support.v4.content.ContextCompat;
 
 import com.example.android.background.MainActivity;
 import com.example.android.background.R;
+import com.example.android.background.sync.WaterReminderIntentService;
 
 /**
  * Utility class for creating hydration notifications
@@ -90,7 +91,9 @@ public class NotificationUtils {
 
     //  completed (5) Add a static method called ignoreReminderAction
     private static NotificationCompat.Action ignoreReminderAction(Context context) {
-        //      TODO (6) Create an Intent to launch WaterReminderIntentService
+        //      completed (6) Create an Intent to launch WaterReminderIntentService
+        Intent ignoreReminderIntent = new Intent(context, WaterReminderIntentService.class);
+
         //      TODO (7) Set the action of the intent to designate you want to dismiss the notification
         //      TODO (8) Create a PendingIntent from the intent to launch WaterReminderIntentService
         //      TODO (9) Create an Action for the user to ignore the notification (and dismiss it)
