@@ -53,6 +53,9 @@ public class NotificationUtils {
      */
     private static final String WATER_REMINDER_NOTIFICATION_CHANNEL_ID = "reminder_notification_channel";
 
+    private static final int ACTION_DRINK_PENDING_INTENT_ID = 1;
+    private static final int ACTION_IGNORE_PENDING_INTENT_ID = 14;
+
     //  completed (1) Create a method to clear all notifications
     public static void clearAllNotifications(Context context) {
         NotificationManager manager = (NotificationManager)
@@ -98,7 +101,13 @@ public class NotificationUtils {
         //      completed (7) Set the action of the intent to designate you want to dismiss the notification
         ignoreReminderIntent.setAction(ReminderTasks.ACTION_DISMISS_NOTIFICATION);
 
-        //      TODO (8) Create a PendingIntent from the intent to launch WaterReminderIntentService
+        //      completed (8) Create a PendingIntent from the intent to launch WaterReminderIntentService
+        PendingIntent ignoreReminderPendingIntent = PendingIntent.getService(
+                context,
+                ACTION_IGNORE_PENDING_INTENT_ID,
+                ignoreReminderIntent,
+                PendingIntent.FLAG_UPDATE_CURRENT);
+
         //      TODO (9) Create an Action for the user to ignore the notification (and dismiss it)
         //      TODO (10) Return the action
     }
