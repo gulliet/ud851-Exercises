@@ -128,6 +128,12 @@ public class NotificationUtils {
         drinkWaterIntent.setAction(ReminderTasks.ACTION_INCREMENT_WATER_COUNT);
 
         //      TODO (14) Create a PendingIntent from the intent to launch WaterReminderIntentService
+        PendingIntent drinkWaterPendingIntent = PendingIntent.getService(
+                context,
+                ACTION_DRINK_PENDING_INTENT_ID,
+                drinkWaterIntent,
+                PendingIntent.FLAG_CANCEL_CURRENT);
+
         //      TODO (15) Create an Action for the user to tell us they've had a glass of water
         //      TODO (16) Return the action
     }
