@@ -51,7 +51,12 @@ public class NotificationUtils {
      */
     private static final String WATER_REMINDER_NOTIFICATION_CHANNEL_ID = "reminder_notification_channel";
 
-    //  TODO (1) Create a method to clear all notifications
+    //  completed (1) Create a method to clear all notifications
+    public static void clearAllNotifications(Context context) {
+        NotificationManager manager = (NotificationManager)
+                context.getSystemService(Context.NOTIFICATION_SERVICE);
+        manager.cancelAll();
+    }
 
     public static void remindUserBecauseCharging(Context context) {
         NotificationManager notificationManager = (NotificationManager)
