@@ -114,7 +114,8 @@ public class NotificationUtils {
                         "No, thanks.",
                         ignoreReminderPendingIntent);
 
-        //      TODO (10) Return the action
+        //      completed (10) Return the action
+        return ignoreReminderAction;
     }
 
 
