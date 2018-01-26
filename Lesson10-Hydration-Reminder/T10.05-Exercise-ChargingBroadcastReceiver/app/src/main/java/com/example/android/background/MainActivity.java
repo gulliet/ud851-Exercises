@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity implements
 
     private Toast mToast;
     private IntentFilter mChargingIntentFilter;
+    private ChargingBroadcastReceiver mChargingReceiver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,10 +72,19 @@ public class MainActivity extends AppCompatActivity implements
         mChargingIntentFilter = new IntentFilter();
         mChargingIntentFilter.addAction(Intent.ACTION_POWER_CONNECTED);
         mChargingIntentFilter.addAction(Intent.ACTION_POWER_DISCONNECTED);
+
+        mChargingReceiver = new ChargingBroadcastReceiver();
     }
 
-    // TODO (7) Override onResume and setup your broadcast receiver. Do this by calling
+    // completed (7) Override onResume and setup your broadcast receiver. Do this by calling
     // registerReceiver with the ChargingBroadcastReceiver and IntentFilter.
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        registerReceiver(mChargingReceiver, mChargingIntentFilter);
+    }
+
 
     // TODO (8) Override onPause and unregister your receiver using the unregisterReceiver method
     
