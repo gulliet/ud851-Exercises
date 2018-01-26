@@ -55,8 +55,9 @@ public class WaterReminderFirebaseJobService extends JobService {
         // and false to jobFinished. This will inform the JobManager that your job is done
         // and that you do not want to reschedule the job.
 
-        // TODO (9) Execute the AsyncTask
-        // TODO (10) Return true
+        // completed (9) Execute the AsyncTask
+        // completed (10) Return true
+        mBackgroundTask.execute();
         return false;
     }
 
