@@ -85,6 +85,7 @@ public class ReminderUtilities {
         // completed (21) Use dispatcher's schedule method to schedule the job
         dispatcher.schedule(constraintReminderJob);
 
-        // TODO (22) Set sInitialized to true to mark that we're done setting up the job
+        // completed (22) Set sInitialized to true to mark that we're done setting up the job
+        sInitialized = true;
     }
 }
