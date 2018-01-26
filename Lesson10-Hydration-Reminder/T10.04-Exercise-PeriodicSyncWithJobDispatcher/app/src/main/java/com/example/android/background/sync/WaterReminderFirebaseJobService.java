@@ -15,8 +15,10 @@
  */
 package com.example.android.background.sync;
 
-public class WaterReminderFirebaseJobService {
-    // TODO (3) WaterReminderFirebaseJobService should extend from JobService
+import com.firebase.jobdispatcher.JobService;
+
+public class WaterReminderFirebaseJobService extends JobService {
+    // completed (3) WaterReminderFirebaseJobService should extend from JobService
 
     // TODO (4) Override onStartJob
         // TODO (5) By default, jobs are executed on the main thread, so make an anonymous class extending
