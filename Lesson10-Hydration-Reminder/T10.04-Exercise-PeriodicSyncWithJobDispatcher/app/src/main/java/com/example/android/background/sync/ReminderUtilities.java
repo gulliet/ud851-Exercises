@@ -49,8 +49,8 @@ public class ReminderUtilities {
         // completed (17) If the job has already been initialized, return
         if (sInitialized) return;
 
-        // cmpleted (18) Create a new GooglePlayDriver
-        com.firebase.jobdispatcher.Driver driver = new GooglePlayDriver();
+        // completed (18) Create a new GooglePlayDriver
+        com.firebase.jobdispatcher.Driver driver = new GooglePlayDriver(context);
 
         // TODO (19) Create a new FirebaseJobDispatcher with the driver
         // TODO (20) Use FirebaseJobDispatcher's newJobBuilder method to build a job which:
