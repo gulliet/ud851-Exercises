@@ -46,7 +46,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void displayBoardingPassInfo(BoardingPassInfo info) {
 
-        // TODO (6) Use mBinding to set the Text in all the textViews using the data in info
+        // completed (6) Use mBinding to set the Text in all the textViews using the data in info
+        mBinding.textViewPassengerName.setText(info.passengerName);
+        mBinding.textViewOriginAirport.setText(info.originCode);
+        mBinding.textViewFlightCode.setText(info.flightCode);
+        mBinding.textViewDestinationAirport.setText(info.destCode);
 
         // TODO (7) Use a SimpleDateFormat formatter to set the formatted value in time text views
 
