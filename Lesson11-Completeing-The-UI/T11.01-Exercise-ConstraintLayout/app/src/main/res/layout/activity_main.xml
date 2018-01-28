@@ -34,7 +34,7 @@
     <!-- completed (6) Set the background to the shape_rectangle_stroke drawable -->
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageViewLeftRectangle"
         android:layout_width="60dp"
         android:layout_height="80dp"
         android:layout_marginLeft="32dp"
