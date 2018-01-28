@@ -17,11 +17,14 @@ android {
     }
     productFlavors {
     }
+    // completed (1) Enable Data Binding in your application
+    dataBinding {
+        enabled true
+    }
 }
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.android.support:appcompat-v7:25.1.0'
     compile 'com.android.support.constraint:constraint-layout:1.0.0-beta4'
-    // TODO (1) Enable Data Binding in your application
 }
