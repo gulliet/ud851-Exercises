@@ -74,7 +74,43 @@
         app:layout_constraintTop_toBottomOf="@+id/textViewPassengerName"
         app:srcCompat="@drawable/shape_rectangle_stroke" />
 
-    <!-- TODO (9) Create a TextView for the origin code, the destination code and the flight code -->
+    <!-- completed (9) Create a TextView for the origin code, the destination code and the flight code -->
+
+    <TextView
+        android:id="@+id/textViewOriginCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        tools:text="@string/origin_code"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewDivider"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewLeftRectangle"
+        app:layout_constraintStart_toStartOf="@+id/imageViewLeftRectangle"
+        app:layout_constraintTop_toTopOf="@+id/imageViewDivider" />
+
+    <TextView
+        android:id="@+id/textViewDestinationCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewDivider"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewRightRectangle"
+        app:layout_constraintStart_toStartOf="@+id/imageViewRightRectangle"
+        app:layout_constraintTop_toTopOf="@+id/imageViewDivider"
+        tools:text="@string/destination_code" />
+
+    <TextView
+        android:id="@+id/textViewFlightCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Display1"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toStartOf="@+id/textViewDestinationCode"
+        app:layout_constraintStart_toEndOf="@+id/textViewOriginCode"
+        app:layout_constraintTop_toTopOf="@+id/imageViewDivider"
+        tools:text="@string/flight_code" />
 
     <!-- TODO (15) Import the plane image SVG file into the drawable directory and name it art_plane -->
     <!-- TODO (16) Create an ImageView for the plane and set the background to art_plane drawable -->
