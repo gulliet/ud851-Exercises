@@ -25,6 +25,7 @@ import com.example.android.boardingpass.utilities.FakeDataUtils;
 
 import java.text.SimpleDateFormat;
 import java.util.Locale;
+import java.util.concurrent.TimeUnit;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -65,7 +66,18 @@ public class MainActivity extends AppCompatActivity {
         mBinding.textViewDepartureTime.setText(departureTime);
         mBinding.textViewArrivalTime.setText(arrivalTime);
 
-        // TODO (8) Use TimeUnit methods to format the total minutes until boarding
+        // completed (8) Use TimeUnit methods to format the total minutes until boarding
+        long totalMinutesUntilBoarding = info.getMinutesUntilBoarding();
+        long hoursUntilBoarding = TimeUnit.MINUTES.toHours(totalMinutesUntilBoarding);
+        long minutesLessHoursUntilBoarding =
+                totalMinutesUntilBoarding - TimeUnit.HOURS.toMinutes(hoursUntilBoarding);
+
+        String hoursAndMinutesUntilBoarding = "{hoursUntilBoarding}:{minutesLessHoursUntilBoarding}";
+
+        mBinding.textViewBoardingInCountdown.setText(hoursAndMinutesUntilBoarding);
+        mBinding.textViewTerminal.setText(info.departureTerminal);
+        mBinding.textViewGate.setText(info.departureGate);
+        mBinding.textViewSeat.setText(info.seatNumber);
 
     }
 }
