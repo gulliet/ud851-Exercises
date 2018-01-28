@@ -37,14 +37,29 @@
         android:id="@+id/imageViewLeftRectangle"
         android:layout_width="60dp"
         android:layout_height="80dp"
-        android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewPassengerName"
         app:srcCompat="@drawable/shape_rectangle_stroke" />
 
-    <!-- TODO (7) Create an ImageView for the divider -->
+    <!-- completed (7) Create an ImageView for the divider -->
+
+    <ImageView
+        android:id="@+id/imageViewDivider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@color/colorPrimaryLight"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewRightRectangle"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewRightRectangle"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageViewLeftRectangle"
+        app:layout_constraintTop_toTopOf="@+id/imageViewRightRectangle"
+        app:srcCompat="@drawable/shape_rectangle_stroke" />
 
     <!-- completed (8) Create an ImageView for the rightRectangle -->
 
