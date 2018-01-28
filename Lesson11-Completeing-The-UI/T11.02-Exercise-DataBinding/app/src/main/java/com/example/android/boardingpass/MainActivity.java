@@ -72,7 +72,9 @@ public class MainActivity extends AppCompatActivity {
         long minutesLessHoursUntilBoarding =
                 totalMinutesUntilBoarding - TimeUnit.HOURS.toMinutes(hoursUntilBoarding);
 
-        String hoursAndMinutesUntilBoarding = "{hoursUntilBoarding}:{minutesLessHoursUntilBoarding}";
+        String hoursAndMinutesUntilBoarding = getString(R.string.countDownFormat,
+                hoursUntilBoarding,
+                minutesLessHoursUntilBoarding);
 
         mBinding.textViewBoardingInCountdown.setText(hoursAndMinutesUntilBoarding);
         mBinding.textViewTerminal.setText(info.departureTerminal);
