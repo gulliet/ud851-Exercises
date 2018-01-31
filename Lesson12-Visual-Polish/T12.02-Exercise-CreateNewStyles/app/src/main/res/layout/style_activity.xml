@@ -14,9 +14,9 @@
     <!-- All mail folder views -->
     <!-- completed (3) Apply the "folderStyle" to all of these views and delete the redundant properties -->
 
-    <!-- TODO (5) Apply the "inboxStyle" to the inbox text view -->
+    <!-- completed (5) Apply the "inboxStyle" to the inbox text view -->
     <TextView
-        style="@style/folderStyle"
+        style="@style/inboxStyle"
         android:drawableStart="@drawable/ic_inbox"
         android:drawableLeft="@drawable/ic_inbox"
         android:text="@string/inbox" />
