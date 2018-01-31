@@ -16,15 +16,9 @@
 
     <!-- TODO (5) Apply the "inboxStyle" to the inbox text view -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:drawablePadding="8dp"
-        android:paddingTop="4dp"
-        android:paddingBottom="4dp"
+        style="@style/folderStyle"
         android:drawableStart="@drawable/ic_inbox"
         android:drawableLeft="@drawable/ic_inbox"
-        android:textSize="28sp"
-        android:textColor="@android:color/black"
         android:text="@string/inbox" />
 
     <TextView
