@@ -24,7 +24,7 @@
 
     <!-- The layout includes views for a placeholder image, article title, date, and body text -->
     <ImageView
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_gravity="center_horizontal"
         android:layout_height="200dp"
         android:layout_weight="1"
@@ -35,7 +35,14 @@
         android:gravity="center"
         android:contentDescription="@string/image_placeholder" />
 
-    <!-- TODO (4) Wrap the text in a vertical linear layout and add more padding (8dp) to the left and right of all text -->
+    <!-- completed (4) Wrap the text in a vertical linear layout and add more padding (8dp) to the left and right of all text -->
+<LinearLayout
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_weight="2"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp">
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
@@ -64,5 +71,6 @@
         android:text="@string/sample_body_text"
         android:textColor="@android:color/black"
         android:textSize="20sp" />
+</LinearLayout>
 
 </LinearLayout>
